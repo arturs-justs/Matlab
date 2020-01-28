@@ -1,0 +1,274 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>lab0_history</title><meta name="generator" content="MATLAB 9.4"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2020-01-28"><meta name="DC.source" content="lab0_history.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img, h1 img, h2 img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, code { font-size:12px; }
+tt { font-size: 1.2em; }
+pre { margin:0px 0px 20px; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+pre.error { color:red; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><h2>Contents</h2><div><ul><li><a href="#2">L&#299;nijas izskata mai&#326;a</a></li><li><a href="#3">L&#299;nijas izskata mai&#326;a</a></li><li><a href="#4">K&#257; z&#299;m&#275;t vair&#257;kas l&#299;knes</a></li><li><a href="#5">ja x ir vien&#257;ds</a></li><li><a href="#6">K&#257; z&#299;m&#275;t vair&#257;kas l&#299;kmes - 2</a></li><li><a href="#7">Lisa&#382;u figuras z&#299;m&#275;&#353;ana</a></li></ul></div><pre class="codeinput"><span class="comment">%-- 01/28/2020 02:40:16 PM --%</span>
+mkdir <span class="string">lab0</span>
+cd <span class="string">lab0</span>
+a=1
+b=2
+c = a+b
+A = [ 1 2 ; 3 4]
+B=A*A
+C=A.*A
+C
+diary <span class="string">lab0_diary.m</span>
+<span class="comment">% Uzz&#299;m&#275;si 2. k&#257;rtas polinomu</span>
+<span class="comment">% polinoma koeficienti:</span>
+C = [2 3 10]
+<span class="comment">% Uzz&#299;m&#275;sim 2. k&#257;rtas polinomu</span>
+C = [2 3 10];
+x = -6:2:6;
+<span class="comment">% x = s&#257;kuma_elements:solis:beigu_elements</span>
+y = C(1)*x.^2+C(2)*x+C(3)
+<span class="comment">% uzz&#299;m&#275;sim</span>
+plot(x,y)
+x2 = -6:0.01:6;
+y2 = C(1)*x2.^2+C(2)*x2+C(3);
+plot(x2,y2)
+</pre><pre class="codeoutput">Warning: Directory already exists. 
+
+a =
+
+     1
+
+
+b =
+
+     2
+
+
+c =
+
+     3
+
+
+A =
+
+     1     2
+     3     4
+
+
+B =
+
+     7    10
+    15    22
+
+
+C =
+
+     1     4
+     9    16
+
+
+C =
+
+     1     4
+     9    16
+
+
+C =
+
+     2     3    10
+
+
+y =
+
+    64    30    12    10    24    54   100
+
+</pre><img vspace="5" hspace="5" src="lab0_history_01.png" alt=""> <h2 id="2">L&#299;nijas izskata mai&#326;a</h2><pre class="codeinput">plat(x,y)
+plot(x,y)
+plat(x2,y2)
+plot(x2,y2)
+</pre><pre class="codeoutput error">Undefined function 'plat' for input arguments of type 'double'.
+
+Error in lab0_history (line 26)
+plat(x,y)
+</pre><h2 id="3">L&#299;nijas izskata mai&#326;a</h2><p>kr&#257;sa</p><pre class="codeinput">plot(x,y, <span class="string">'g'</span>)
+plot(x,y, <span class="string">'o'</span>)
+<span class="comment">% l&#299;nijas izskats</span>
+plot(x,y, <span class="string">'--'</span>)
+<span class="comment">% visi tr&#299;s kop&#257;</span>
+plot(x,y, <span class="string">'--og'</span>)
+help <span class="string">plot</span>
+plot(x,y, <span class="string">'-.xc'</span>)
+plot(x,y, <span class="string">'-.xm'</span>)
+plot(x,y, <span class="string">':.xm'</span>)
+plot(x,y, <span class="string">'-.xm'</span>)
+close <span class="string">all</span>
+my_plot(x,y)
+my_plot(x2,y2)
+</pre><h2 id="4">K&#257; z&#299;m&#275;t vair&#257;kas l&#299;knes</h2><pre class="codeinput">plot(x,y,x2,y2)
+</pre><h2 id="5">ja x ir vien&#257;ds</h2><pre class="codeinput">plot(x,[y' -y'])
+plot(x,y,<span class="string">'o'</span>,x2,y2)
+<span class="comment">% citas grafisk&#257;s funkcijas</span>
+stem(x,y)
+stairs(x,y)
+bar(x,y)
+</pre><h2 id="6">K&#257; z&#299;m&#275;t vair&#257;kas l&#299;kmes - 2</h2><pre class="codeinput">plot(x2,y2)
+hold <span class="string">on</span>
+stairs(x,y)
+hold <span class="string">off</span>
+</pre><h2 id="7">Lisa&#382;u figuras z&#299;m&#275;&#353;ana</h2><p>parametriskie grafiki</p><pre class="codeinput">edit
+help <span class="string">lisazu</span>
+lisazu
+lisazu_fun(1,2)
+lisazu_fun_anim(5,2)
+lisazu_fun_anim(5,1337)
+lisazu_fun_anim(69,1337)
+lisazu_fun_anim(1,1337)
+lisazu_fun_anim(2,1337)
+lisazu_fun_anim(21,1337)
+lisazu_fun_anim(88,1337)
+lisazu_fun_anim(133,1337)
+lisazu_fun_anim(1337,1337)
+lisazu_fun_anim(69,69)
+lisazu_fun_anim(3333,3333)
+dairy <span class="string">off</span>
+diary <span class="string">off</span>
+</pre><p class="footer"><br><a href="https://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2018a</a><br></p></div><!--
+##### SOURCE BEGIN #####
+%REPLACE_WITH_DASH_DASH 01/28/2020 02:40:16 PM REPLACE_WITH_DASH_DASH%
+mkdir lab0
+cd lab0
+a=1
+b=2
+c = a+b
+A = [ 1 2 ; 3 4]
+B=A*A
+C=A.*A
+C
+diary lab0_diary.m
+% Uzzīmēsi 2. kārtas polinomu
+% polinoma koeficienti:
+C = [2 3 10]
+% Uzzīmēsim 2. kārtas polinomu
+C = [2 3 10];
+x = -6:2:6;
+% x = sākuma_elements:solis:beigu_elements
+y = C(1)*x.^2+C(2)*x+C(3)
+% uzzīmēsim
+plot(x,y)
+x2 = -6:0.01:6;
+y2 = C(1)*x2.^2+C(2)*x2+C(3);
+plot(x2,y2)
+%% Līnijas izskata maiņa
+plat(x,y)
+plot(x,y)
+plat(x2,y2)
+plot(x2,y2)
+%% Līnijas izskata maiņa
+% krāsa
+plot(x,y, 'g')
+plot(x,y, 'o')
+% līnijas izskats
+plot(x,y, 'REPLACE_WITH_DASH_DASH')
+% visi trīs kopā
+plot(x,y, 'REPLACE_WITH_DASH_DASHog')
+help plot
+plot(x,y, '-.xc')
+plot(x,y, '-.xm')
+plot(x,y, ':.xm')
+plot(x,y, '-.xm')
+close all
+my_plot(x,y)
+my_plot(x2,y2)
+%% Kā zīmēt vairākas līknes
+plot(x,y,x2,y2)
+%% ja x ir vienāds
+plot(x,[y' -y'])
+plot(x,y,'o',x2,y2)
+% citas grafiskās funkcijas
+stem(x,y)
+stairs(x,y)
+bar(x,y)
+%% Kā zīmēt vairākas līkmes - 2
+plot(x2,y2)
+hold on
+stairs(x,y)
+hold off
+%% Lisažu figuras zīmēšana
+% parametriskie grafiki
+edit
+help lisazu
+lisazu
+lisazu_fun(1,2)
+lisazu_fun_anim(5,2)
+lisazu_fun_anim(5,1337)
+lisazu_fun_anim(69,1337)
+lisazu_fun_anim(1,1337)
+lisazu_fun_anim(2,1337)
+lisazu_fun_anim(21,1337)
+lisazu_fun_anim(88,1337)
+lisazu_fun_anim(133,1337)
+lisazu_fun_anim(1337,1337)
+lisazu_fun_anim(69,69)
+lisazu_fun_anim(3333,3333)
+dairy off
+diary off
+##### SOURCE END #####
+--></body></html>
