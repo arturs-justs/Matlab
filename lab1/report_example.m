@@ -9,7 +9,7 @@
 % <<../bilde1.png>>
 %
 
-A = imread('ww.png');
+A = imread('bilde2.png');
 figure(1), image(A);
 figure(1),image([0,6],[120,0],A);
 set(gca,'YDir','normal');
