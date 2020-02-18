@@ -1,0 +1,482 @@
+%% Simboliskaa mateemaatika
+%% Piemeers
+syms a11 a12 a21 a22
+A = [a11 a12 ; a21 a22]
+ 
+A =
+ 
+[ a11, a12]
+[ a21, a22]
+ 
+syms b11 b12 b21 b22
+B = [b11 b12 ; b21 b22]
+ 
+B =
+ 
+[ b11, b12]
+[ b21, b22]
+ 
+C = A*B
+ 
+C =
+ 
+[ a11*b11 + a12*b21, a11*b12 + a12*b22]
+[ a21*b11 + a22*b21, a21*b12 + a22*b22]
+ 
+D = A.*B
+ 
+D =
+ 
+[ a11*b11, a12*b12]
+[ a21*b21, a22*b22]
+ 
+%% Simbolisko mainiigo defineesana
+% 1. veids
+x = sym('x');
+y = sym('y');
+sqrt(x^2)
+ 
+ans =
+ 
+(x^2)^(1/2)
+ 
+%% pienemsim kaa x ir lielaaks par 0
+x = sym('x','positive');
+sqrt(x^2)
+ 
+ans =
+ 
+x
+ 
+% 2. veids 
+syms a11 a12 a21 a22
+A = [a11 a12; a21 a22];
+A'
+ 
+ans =
+ 
+[ conj(a11), conj(a21)]
+[ conj(a12), conj(a22)]
+ 
+%% pienemsim kaa a11 a12 a21 a22 ir relaali
+syms a11 a12 a21 a22 real
+A'
+ 
+ans =
+ 
+[ a11, a21]
+[ a12, a22]
+ 
+%% 3. veids
+A = sym('a',[3 4])
+ 
+A =
+ 
+[ a1_1, a1_2, a1_3, a1_4]
+[ a2_1, a2_2, a2_3, a2_4]
+[ a3_1, a3_2, a3_3, a3_4]
+ 
+%% atvisinaasana
+syms x
+diff(x^2)
+ 
+ans =
+ 
+2*x
+ 
+%% parciaalie atvisinaajumi
+syms x y
+z = x^5+y^4;
+diff(z,x)
+ 
+ans =
+ 
+5*x^4
+ 
+diff(z,y)
+ 
+ans =
+ 
+4*y^3
+ 
+%% Integreesana
+%% Nenoteiktais integraalis\
+int(x^2,x)
+ 
+ans =
+ 
+x^3/3
+ 
+syms a x
+int(x^2,a)
+ 
+ans =
+ 
+a*x^2
+ 
+%% Noteiktais integraalis
+syms x
+int(x^2,x,-3,3)
+ 
+ans =
+ 
+18
+ 
+double(int(x^2,x,-3,3))
+
+ans =
+
+    18
+
+%% Robezas
+% limit()
+syms x
+limit(1/(x-1),x,1,'left')
+ 
+ans =
+ 
+-Inf
+ 
+limit(1/(x-1),x,1,'right')
+ 
+ans =
+ 
+Inf
+ 
+%% Vienaadojumu risinaashana
+syms x
+solve(x^2-5*x+6==0,x)
+ 
+ans =
+ 
+ 2
+ 3
+ 
+%% Vienaadojumu sisteemas
+syms x y z
+atb = solve(x+y+z==21,x+y-z==1,x-y+z==9)
+
+atb = 
+
+  <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> with fields:
+
+    x: [1×1 sym]
+    y: [1×1 sym]
+    z: [1×1 sym]
+
+atb.x
+ 
+ans =
+ 
+5
+ 
+atb.y
+ 
+ans =
+ 
+6
+ 
+atb.z
+ 
+ans =
+ 
+10
+ 
+%% izteiskmju vienkaarsosana
+syms x
+y = (x-1)*(x-2)/((x-3)*(x-4)^2)
+ 
+y =
+ 
+((x - 1)*(x - 2))/((x - 3)*(x - 4)^2)
+ 
+yd = diff(y)
+ 
+yd =
+ 
+(x - 1)/((x - 3)*(x - 4)^2) + (x - 2)/((x - 3)*(x - 4)^2) - (2*(x - 1)*(x - 2))/((x - 3)*(x - 4)^3) - ((x - 1)*(x - 2))/((x - 3)^2*(x - 4)^2)
+ 
+simplyfy(yd)
+{Undefined function or variable 'simplyfy'.
+} 
+simplify(yd)
+ 
+ans =
+ 
+(- x^3 + 2*x^2 + 9*x - 16)/((x - 3)^2*(x - 4)^3)
+ 
+%% izteiksju veinkaarsosana 2
+syms x
+y = (x-2)*(x-3);
+y
+ 
+y =
+ 
+(x - 2)*(x - 3)
+ 
+y2 = expand(y)
+ 
+y2 =
+ 
+x^2 - 5*x + 6
+ 
+%% izteiksju veinkaarsosana 3
+factor(y2)
+ 
+ans =
+ 
+[ x - 2, x - 3]
+ 
+%% izteiksju veinkaarsosana 4
+horner(y)
+ 
+ans =
+ 
+x*(x - 5) + 6
+ 
+%% simboliskas konstantes
+pi
+
+ans =
+
+    3.1416
+
+format long
+pi
+
+ans =
+
+   3.141592653589793
+
+a = vpa('pi')
+ 
+a =
+ 
+3.1415926535897932384626433832795
+ 
+b = vpa('2')
+ 
+b =
+ 
+2.0
+ 
+c = vpa(2)
+ 
+c =
+ 
+2.0
+ 
+a+b+c
+ 
+ans =
+ 
+7.1415926535897932384626433832795
+ 
+digits(100)
+a = vpa(pi)
+ 
+a =
+ 
+3.141592653589793238462643383279502884197169399375105820974944592307816406286208998628034825342117068
+ 
+a = vpa(exp(1))
+ 
+a =
+ 
+2.71828182845904553488480814849026501178741455078125
+ 
+sqrt(a)
+ 
+ans =
+ 
+1.648721270700128237684053351021451524365396084769306765683519857939541955411797717598212470725485303
+ 
+digits(10)
+sqrt(a)
+ 
+ans =
+ 
+1.648721271
+ 
+class(a)
+
+ans =
+
+    'sym'
+
+class(b)
+
+ans =
+
+    'sym'
+
+class(c)
+
+ans =
+
+    'sym'
+
+%% izteismju "skaista" atteloshana
+y = (x-1)*(x-2)/((x-3)*(x-4)^2)
+ 
+y =
+ 
+((x - 1)*(x - 2))/((x - 3)*(x - 4)^2)
+ 
+pretty(y)
+ (x - 1) (x - 2)
+----------------
+               2
+(x - 3) (x - 4)
+
+%% izteismju "skaista" atteloshana 2 variants
+syms x
+y = sqrt(x-1)/(x-4)^5
+ 
+y =
+ 
+(x - 1)^(1/2)/(x - 4)^5
+ 
+yltx = latex(y)
+
+yltx =
+
+    '\frac{\sqrt{x-1}}{{\left(x-4\right)}^5}'
+
+yltx2 = ['$',yltx,'$']
+
+yltx2 =
+
+    '$\frac{\sqrt{x-1}}{{\left(x-4\right)}^5}$'
+
+text(0,0.5,yltx2,'Interpreter','FontSize',32,'BackgroundColor','white')
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('text')" style="font-weight:bold">text</a>
+Invalid parameter/value pair arguments
+} 
+text(0,0.5,yltx2,'Interpreter','latex','FontSize',32,'BackgroundColor','white')
+text(0.5,0.5,yltx2,'Interpreter','latex','FontSize',32,'BackgroundColor','white')
+text(0.5,0.5,yltx2,'Interpreter','latex','FontSize',32,'BackgroundColor','white')
+set(gca,'Visible','off')
+%% rezultaatu grafiska atteloshana
+%% apreekinu veiksana
+syms x
+y = x^2;
+ezplot(y)
+%% apreekinu veiksana
+%% rezultaatu grafiskaa atteloshana ar plot
+%% (2. lab. darba 2. uzdevums)
+%% 1.
+% Pienemsim ka ir dota funkcija, kurai ir jaatrod atvasinaajums
+% Un gan funkciju, gan atvasinaajumu buus jaauziimee uz grafika izmantojot plot uzdotaajaa intervaalaa
+% arii ar letex buus jaaizveido "legend" -a 
+syms x
+y = x^3+2*x^2-5*x+4;
+% 2.
+yd = diff(y)
+ 
+yd =
+ 
+3*x^2 + 4*x - 5
+ 
+% atradam atvasinaajumu
+% 3.
+% Izteiksmes vektorizaacija
+%% (punktinu ielikshana)
+yv = vectorize(y)
+
+yv =
+
+    '2.*x.^2 - 5.*x + x.^3 + 4'
+
+ydv = vectorize(yd)
+
+ydv =
+
+    '4.*x + 3.*x.^2 - 5'
+
+%% 4. defineesim x kaa skaitlu vektoru
+x = -2:0.01:2;
+yn = eval(yv);
+ydn = eval(ydv);
+%% tas biija 5. solis, izteiksmes interpretaacjia, citiem vaardiem, paskataas kaads ir x un ieliek to
+%% 6. ziimesim ar plot
+plot(x,yn,x,ydn)
+%% 7. anoteesim grafiku
+yltx = latex(y);
+ydltxt = latex(yd)
+
+ydltxt =
+
+    '3\,x^2+4\,x-5'
+
+h = legend(['$',yltx,'$'],['$',ydltxt,'$']), set(h,'Interpreter','Latex')
+[Warning: Ignoring extra legend entries.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('legend>set_children_and_strings', '/usr/local/MATLAB/R2018a/toolbox/matlab/scribe/legend.p', 646)" style="font-weight:bold">legend>set_children_and_strings</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2018a/toolbox/matlab/scribe/legend.p',646,0)">line 646</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('legend>make_legend', '/usr/local/MATLAB/R2018a/toolbox/matlab/scribe/legend.p', 316)" style="font-weight:bold">legend>make_legend</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2018a/toolbox/matlab/scribe/legend.p',316,0)">line 316</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('legend', '/usr/local/MATLAB/R2018a/toolbox/matlab/scribe/legend.p', 259)" style="font-weight:bold">legend</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2018a/toolbox/matlab/scribe/legend.p',259,0)">line 259</a>)] 
+
+h = 
+
+  <a href="matlab:helpPopup matlab.graphics.illustration.Legend" style="font-weight:bold">Legend</a> with properties:
+
+         String: {}
+       Location: 'northeast'
+    Orientation: 'vertical'
+       FontSize: 9
+       Position: [0.732738097100740 0.855555556619924 0.153571426708783 0.045238094173727]
+          Units: 'normalized'
+
+  Show <a href="matlab:if exist('h', 'var'), matlab.graphics.internal.getForDisplay('h', h, 'matlab.graphics.illustration.Legend'), else, matlab.graphics.internal.getForDisplay('h'), end">all properties</a>
+
+h = legend(['$',yltx,'$'],['$',ydltxt,'$']), set(h,'Interpreter','Latex')
+[Warning: Ignoring extra legend entries.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('legend>set_children_and_strings', '/usr/local/MATLAB/R2018a/toolbox/matlab/scribe/legend.p', 646)" style="font-weight:bold">legend>set_children_and_strings</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2018a/toolbox/matlab/scribe/legend.p',646,0)">line 646</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('legend>make_legend', '/usr/local/MATLAB/R2018a/toolbox/matlab/scribe/legend.p', 316)" style="font-weight:bold">legend>make_legend</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2018a/toolbox/matlab/scribe/legend.p',316,0)">line 316</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('legend', '/usr/local/MATLAB/R2018a/toolbox/matlab/scribe/legend.p', 259)" style="font-weight:bold">legend</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2018a/toolbox/matlab/scribe/legend.p',259,0)">line 259</a>)] 
+
+h = 
+
+  <a href="matlab:helpPopup matlab.graphics.illustration.Legend" style="font-weight:bold">Legend</a> with properties:
+
+         String: {}
+       Location: 'northeast'
+    Orientation: 'vertical'
+       FontSize: 9
+       Position: [0.732738097100740 0.855555556619924 0.153571426708783 0.045238094173727]
+          Units: 'normalized'
+
+  Show <a href="matlab:if exist('h', 'var'), matlab.graphics.internal.getForDisplay('h', h, 'matlab.graphics.illustration.Legend'), else, matlab.graphics.internal.getForDisplay('h'), end">all properties</a>
+
+plot(x,yn,x,ydn)
+h = legend(['$',yltx,'$'],['$',ydltxt,'$']), set(h,'Interpreter','Latex')
+
+h = 
+
+[Warning: Error updating Legend.
+
+ String scalar or character vector must have valid interpreter syntax:
+$x^3+2\,x^2-5\,x+4$
+] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('defaulterrorcallback', '/usr/local/MATLAB/R2018a/toolbox/matlab/graphics/defaulterrorcallback.m', 12)" style="font-weight:bold">defaulterrorcallback</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2018a/toolbox/matlab/graphics/defaulterrorcallback.m',12,0)">line 12</a>)
+  In matlab.graphics.illustration.Legend/get.String
+  In matlab.graphics.illustration.Legend/getDescriptiveLabelForDisplay] 
+[Warning: Error updating Legend.
+
+ String scalar or character vector must have valid interpreter syntax:
+$3\,x^2+4\,x-5$
+] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('defaulterrorcallback', '/usr/local/MATLAB/R2018a/toolbox/matlab/graphics/defaulterrorcallback.m', 12)" style="font-weight:bold">defaulterrorcallback</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2018a/toolbox/matlab/graphics/defaulterrorcallback.m',12,0)">line 12</a>)
+  In matlab.graphics.illustration.Legend/get.String
+  In matlab.graphics.illustration.Legend/getDescriptiveLabelForDisplay] 
+  <a href="matlab:helpPopup matlab.graphics.illustration.Legend" style="font-weight:bold">Legend</a> ($x^3+2\,x^2-5\,x+4$, $3\,x^2+4\,x-5$) with properties:
+
+         String: {'$x^3+2\,x^2-5\,x+4$'  '$3\,x^2+4\,x-5$'}
+       Location: 'northeast'
+    Orientation: 'vertical'
+       FontSize: 9
+       Position: [0.558479539274472 0.815577080453760 0.328070168327867 0.083535106794020]
+          Units: 'normalized'
+
+  Show <a href="matlab:if exist('h', 'var'), matlab.graphics.internal.getForDisplay('h', h, 'matlab.graphics.illustration.Legend'), else, matlab.graphics.internal.getForDisplay('h'), end">all properties</a>
+
+lab2_history

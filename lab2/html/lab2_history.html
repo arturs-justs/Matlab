@@ -1,0 +1,631 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>lab2_history</title><meta name="generator" content="MATLAB 9.4"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2020-02-18"><meta name="DC.source" content="lab2_history.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img, h1 img, h2 img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, code { font-size:12px; }
+tt { font-size: 1.2em; }
+pre { margin:0px 0px 20px; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+pre.error { color:red; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><h2>Contents</h2><div><ul><li><a href="#2">Simboliskaa mateemaatika</a></li><li><a href="#3">Piemeers</a></li><li><a href="#4">Simbolisko mainiigo defineesana</a></li><li><a href="#5">pienemsim kaa x ir lielaaks par 0</a></li><li><a href="#6">pienemsim kaa a11 a12 a21 a22 ir relaali</a></li><li><a href="#7">3. veids</a></li><li><a href="#8">atvisinaasana</a></li><li><a href="#9">parciaalie atvisinaajumi</a></li><li><a href="#10">Integreesana</a></li><li><a href="#11">Nenoteiktais integraalis\</a></li><li><a href="#12">Noteiktais integraalis</a></li><li><a href="#13">Robezas</a></li><li><a href="#14">Vienaadojumu risinaashana</a></li><li><a href="#15">Vienaadojumu sisteemas</a></li><li><a href="#16">izteiskmju vienkaarsosana</a></li><li><a href="#17">izteiksju veinkaarsosana 2</a></li><li><a href="#18">izteiksju veinkaarsosana 3</a></li><li><a href="#19">izteiksju veinkaarsosana 4</a></li><li><a href="#20">simboliskas konstantes</a></li><li><a href="#21">izteismju "skaista" atteloshana</a></li><li><a href="#22">izteismju "skaista" atteloshana 2 variants</a></li><li><a href="#23">rezultaatu grafiska atteloshana</a></li><li><a href="#24">apreekinu veiksana</a></li><li><a href="#25">apreekinu veiksana</a></li><li><a href="#26">rezultaatu grafiskaa atteloshana ar plot</a></li><li><a href="#27">(2. lab. darba 2. uzdevums)</a></li><li><a href="#28">1.</a></li><li><a href="#29">(punktinu ielikshana)</a></li><li><a href="#30">4. defineesim x kaa skaitlu vektoru</a></li><li><a href="#31">tas biija 5. solis, izteiksmes interpretaacjia, citiem vaardiem, paskataas kaads ir x un ieliek to</a></li><li><a href="#32">6. ziimesim ar plot</a></li><li><a href="#33">7. anoteesim grafiku</a></li></ul></div><pre class="codeinput"><span class="comment">%-- 02/18/2020 02:37:00 PM --%</span>
+mkdir <span class="string">lab2</span>
+cd <span class="string">lab2</span>
+diary <span class="string">lab2_diary</span>
+</pre><pre class="codeoutput">Warning: Directory already exists. 
+</pre><h2 id="2">Simboliskaa mateemaatika</h2><h2 id="3">Piemeers</h2><pre class="codeinput">syms <span class="string">a11</span> <span class="string">a12</span> <span class="string">a21</span> <span class="string">a22</span>
+A = [a11 a12 ; a21 a22]
+syms <span class="string">b11</span> <span class="string">b12</span> <span class="string">b21</span> <span class="string">b22</span>
+B = [b11 b12 ; b21 b22]
+C = A*B
+D = A.*B
+</pre><pre class="codeoutput"> 
+A =
+ 
+[ a11, a12]
+[ a21, a22]
+ 
+ 
+B =
+ 
+[ b11, b12]
+[ b21, b22]
+ 
+ 
+C =
+ 
+[ a11*b11 + a12*b21, a11*b12 + a12*b22]
+[ a21*b11 + a22*b21, a21*b12 + a22*b22]
+ 
+ 
+D =
+ 
+[ a11*b11, a12*b12]
+[ a21*b21, a22*b22]
+ 
+</pre><h2 id="4">Simbolisko mainiigo defineesana</h2><p>1. veids</p><pre class="codeinput">x = sym(<span class="string">'x'</span>);
+y = sym(<span class="string">'y'</span>);
+sqrt(x^2)
+</pre><pre class="codeoutput"> 
+ans =
+ 
+x
+ 
+</pre><h2 id="5">pienemsim kaa x ir lielaaks par 0</h2><pre class="codeinput">x = sym(<span class="string">'x'</span>,<span class="string">'positive'</span>);
+sqrt(x^2)
+<span class="comment">% 2. veids</span>
+syms <span class="string">a11</span> <span class="string">a12</span> <span class="string">a21</span> <span class="string">a22</span>
+A = [a11 a12; a21 a22];
+A'
+</pre><pre class="codeoutput"> 
+ans =
+ 
+x
+ 
+ 
+ans =
+ 
+[ a11, a21]
+[ a12, a22]
+ 
+</pre><h2 id="6">pienemsim kaa a11 a12 a21 a22 ir relaali</h2><pre class="codeinput">syms <span class="string">a11</span> <span class="string">a12</span> <span class="string">a21</span> <span class="string">a22</span> <span class="string">real</span>
+A'
+</pre><pre class="codeoutput"> 
+ans =
+ 
+[ a11, a21]
+[ a12, a22]
+ 
+</pre><h2 id="7">3. veids</h2><pre class="codeinput">A = sym(<span class="string">'a'</span>,[3 4])
+</pre><pre class="codeoutput"> 
+A =
+ 
+[ a1_1, a1_2, a1_3, a1_4]
+[ a2_1, a2_2, a2_3, a2_4]
+[ a3_1, a3_2, a3_3, a3_4]
+ 
+</pre><h2 id="8">atvisinaasana</h2><pre class="codeinput">syms <span class="string">x</span>
+diff(x^2)
+</pre><pre class="codeoutput"> 
+ans =
+ 
+2*x
+ 
+</pre><h2 id="9">parciaalie atvisinaajumi</h2><pre class="codeinput">syms <span class="string">x</span> <span class="string">y</span>
+z = x^5+y^4;
+diff(z,x)
+diff(z,y)
+</pre><pre class="codeoutput"> 
+ans =
+ 
+5*x^4
+ 
+ 
+ans =
+ 
+4*y^3
+ 
+</pre><h2 id="10">Integreesana</h2><h2 id="11">Nenoteiktais integraalis\</h2><pre class="codeinput">int(x^2,x)
+syms <span class="string">a</span> <span class="string">x</span>
+int(x^2,a)
+</pre><pre class="codeoutput"> 
+ans =
+ 
+x^3/3
+ 
+ 
+ans =
+ 
+a*x^2
+ 
+</pre><h2 id="12">Noteiktais integraalis</h2><pre class="codeinput">syms <span class="string">x</span>
+int(x^2,x,-3,3)
+double(int(x^2,x,-3,3))
+</pre><pre class="codeoutput"> 
+ans =
+ 
+18
+ 
+
+ans =
+
+    18
+
+</pre><h2 id="13">Robezas</h2><p>limit()</p><pre class="codeinput">syms <span class="string">x</span>
+limit(1/(x-1),x,1,<span class="string">'left'</span>)
+limit(1/(x-1),x,1,<span class="string">'right'</span>)
+</pre><pre class="codeoutput"> 
+ans =
+ 
+-Inf
+ 
+ 
+ans =
+ 
+Inf
+ 
+</pre><h2 id="14">Vienaadojumu risinaashana</h2><pre class="codeinput">syms <span class="string">x</span>
+solve(x^2-5*x+6==0,x)
+</pre><pre class="codeoutput"> 
+ans =
+ 
+ 2
+ 3
+ 
+</pre><h2 id="15">Vienaadojumu sisteemas</h2><pre class="codeinput">syms <span class="string">x</span> <span class="string">y</span> <span class="string">z</span>
+atb = solve(x+y+z==21,x+y-z==1,x-y+z==9)
+atb.x
+atb.y
+atb.z
+</pre><pre class="codeoutput">
+atb = 
+
+  struct with fields:
+
+    x: [1&times;1 sym]
+    y: [1&times;1 sym]
+    z: [1&times;1 sym]
+
+ 
+ans =
+ 
+5
+ 
+ 
+ans =
+ 
+6
+ 
+ 
+ans =
+ 
+10
+ 
+</pre><h2 id="16">izteiskmju vienkaarsosana</h2><pre class="codeinput">syms <span class="string">x</span>
+y = (x-1)*(x-2)/((x-3)*(x-4)^2)
+yd = diff(y)
+simplify(yd)
+</pre><pre class="codeoutput"> 
+y =
+ 
+((x - 1)*(x - 2))/((x - 3)*(x - 4)^2)
+ 
+ 
+yd =
+ 
+(x - 1)/((x - 3)*(x - 4)^2) + (x - 2)/((x - 3)*(x - 4)^2) - (2*(x - 1)*(x - 2))/((x - 3)*(x - 4)^3) - ((x - 1)*(x - 2))/((x - 3)^2*(x - 4)^2)
+ 
+ 
+ans =
+ 
+(- x^3 + 2*x^2 + 9*x - 16)/((x - 3)^2*(x - 4)^3)
+ 
+</pre><h2 id="17">izteiksju veinkaarsosana 2</h2><pre class="codeinput">syms <span class="string">x</span>
+y = (x-2)*(x-3);
+y
+y2 = expand(y)
+</pre><pre class="codeoutput"> 
+y =
+ 
+(x - 2)*(x - 3)
+ 
+ 
+y2 =
+ 
+x^2 - 5*x + 6
+ 
+</pre><h2 id="18">izteiksju veinkaarsosana 3</h2><pre class="codeinput">factor(y2)
+</pre><pre class="codeoutput"> 
+ans =
+ 
+[ x - 2, x - 3]
+ 
+</pre><h2 id="19">izteiksju veinkaarsosana 4</h2><pre class="codeinput">horner(y)
+</pre><pre class="codeoutput"> 
+ans =
+ 
+x*(x - 5) + 6
+ 
+</pre><h2 id="20">simboliskas konstantes</h2><pre class="codeinput">pi
+format <span class="string">long</span>
+pi
+a = vpa(<span class="string">'pi'</span>)
+b = vpa(<span class="string">'2'</span>)
+c = vpa(2)
+a+b+c
+digits(100)
+a = vpa(pi)
+a = vpa(exp(1))
+sqrt(a)
+digits(10)
+sqrt(a)
+class(a)
+class(b)
+class(c)
+</pre><pre class="codeoutput">
+ans =
+
+   3.141592653589793
+
+
+ans =
+
+   3.141592653589793
+
+ 
+a =
+ 
+3.141592654
+ 
+ 
+b =
+ 
+2.0
+ 
+ 
+c =
+ 
+2.0
+ 
+ 
+ans =
+ 
+7.141592654
+ 
+ 
+a =
+ 
+3.141592653589793238462643383279502884197169399375105820974944592307816406286208998628034825342117068
+ 
+ 
+a =
+ 
+2.71828182845904553488480814849026501178741455078125
+ 
+ 
+ans =
+ 
+1.648721270700128237684053351021451524365396084769306765683519857939541955411797717598212470725485303
+ 
+ 
+ans =
+ 
+1.648721271
+ 
+
+ans =
+
+    'sym'
+
+
+ans =
+
+    'sym'
+
+
+ans =
+
+    'sym'
+
+</pre><h2 id="21">izteismju "skaista" atteloshana</h2><pre class="codeinput">y = (x-1)*(x-2)/((x-3)*(x-4)^2)
+pretty(y)
+</pre><pre class="codeoutput"> 
+y =
+ 
+((x - 1)*(x - 2))/((x - 3)*(x - 4)^2)
+ 
+ (x - 1) (x - 2)
+----------------
+               2
+(x - 3) (x - 4)
+
+</pre><h2 id="22">izteismju "skaista" atteloshana 2 variants</h2><pre class="codeinput">syms <span class="string">x</span>
+y = sqrt(x-1)/(x-4)^5
+yltx = latex(y)
+yltx2 = [<span class="string">'$'</span>,yltx,<span class="string">'$'</span>]
+text(0,0.5,yltx2,<span class="string">'Interpreter'</span>,<span class="string">'latex'</span>,<span class="string">'FontSize'</span>,32,<span class="string">'BackgroundColor'</span>,<span class="string">'white'</span>)
+text(0.5,0.5,yltx2,<span class="string">'Interpreter'</span>,<span class="string">'latex'</span>,<span class="string">'FontSize'</span>,32,<span class="string">'BackgroundColor'</span>,<span class="string">'white'</span>)
+set(gca,<span class="string">'Visible'</span>,<span class="string">'off'</span>)
+</pre><pre class="codeoutput"> 
+y =
+ 
+(x - 1)^(1/2)/(x - 4)^5
+ 
+
+yltx =
+
+    '\frac{\sqrt{x-1}}{{\left(x-4\right)}^5}'
+
+
+yltx2 =
+
+    '$\frac{\sqrt{x-1}}{{\left(x-4\right)}^5}$'
+
+</pre><img vspace="5" hspace="5" src="lab2_history_01.png" alt=""> <h2 id="23">rezultaatu grafiska atteloshana</h2><h2 id="24">apreekinu veiksana</h2><pre class="codeinput">syms <span class="string">x</span>
+y = x^2;
+ezplot(y)
+</pre><img vspace="5" hspace="5" src="lab2_history_02.png" alt=""> <h2 id="25">apreekinu veiksana</h2><h2 id="26">rezultaatu grafiskaa atteloshana ar plot</h2><h2 id="27">(2. lab. darba 2. uzdevums)</h2><h2 id="28">1.</h2><p>Pienemsim ka ir dota funkcija, kurai ir jaatrod atvasinaajums Un gan funkciju, gan atvasinaajumu buus jaauziimee uz grafika izmantojot plot uzdotaajaa intervaalaa arii ar letex buus jaaizveido "legend" -a</p><pre class="codeinput">syms <span class="string">x</span>
+y = x^3+2*x^2-5*x+4;
+<span class="comment">% 2.</span>
+yd = diff(y)
+<span class="comment">% atradam atvasinaajumu</span>
+<span class="comment">% 3.</span>
+<span class="comment">% Izteiksmes vektorizaacija</span>
+</pre><pre class="codeoutput"> 
+yd =
+ 
+3*x^2 + 4*x - 5
+ 
+</pre><h2 id="29">(punktinu ielikshana)</h2><pre class="codeinput">yv = vectorize(y)
+ydv = vectorize(yd)
+</pre><pre class="codeoutput">
+yv =
+
+    '2.*x.^2 - 5.*x + x.^3 + 4'
+
+
+ydv =
+
+    '4.*x + 3.*x.^2 - 5'
+
+</pre><h2 id="30">4. defineesim x kaa skaitlu vektoru</h2><pre class="codeinput">x = -2:0.01:2;
+yn = eval(yv);
+ydn = eval(ydv);
+</pre><h2 id="31">tas biija 5. solis, izteiksmes interpretaacjia, citiem vaardiem, paskataas kaads ir x un ieliek to</h2><h2 id="32">6. ziimesim ar plot</h2><pre class="codeinput">plot(x,yn,x,ydn)
+</pre><img vspace="5" hspace="5" src="lab2_history_03.png" alt=""> <h2 id="33">7. anoteesim grafiku</h2><pre class="codeinput">yltx = latex(y);
+ydltxt = latex(yd)
+h = legend([<span class="string">'$'</span>,yltx,<span class="string">'$'</span>],[<span class="string">'$'</span>,ydltxt,<span class="string">'$'</span>]), set(h,<span class="string">'Interpreter'</span>,<span class="string">'Latex'</span>)
+plot(x,yn,x,ydn)
+h = legend([<span class="string">'$'</span>,yltx,<span class="string">'$'</span>],[<span class="string">'$'</span>,ydltxt,<span class="string">'$'</span>]), set(h,<span class="string">'Interpreter'</span>,<span class="string">'Latex'</span>)
+</pre><pre class="codeoutput">
+ydltxt =
+
+    '3\,x^2+4\,x-5'
+
+
+h = 
+
+Warning: Error updating Legend.
+
+ String scalar or character vector must have valid interpreter syntax:
+$x^3+2\,x^2-5\,x+4$
+ 
+Warning: Error updating Legend.
+
+ String scalar or character vector must have valid interpreter syntax:
+$3\,x^2+4\,x-5$
+ 
+  Legend ($x^3+2\,x^2-5\,x+4$, $3\,x^2+4\,x-5$) with properties:
+
+         String: {'$x^3+2\,x^2-5\,x+4$'  '$3\,x^2+4\,x-5$'}
+       Location: 'northeast'
+    Orientation: 'vertical'
+       FontSize: 9
+       Position: [1&times;4 double]
+          Units: 'normalized'
+
+  Use GET to show all properties
+
+
+h = 
+
+Warning: Error updating Legend.
+
+ String scalar or character vector must have valid interpreter syntax:
+$x^3+2\,x^2-5\,x+4$
+ 
+Warning: Error updating Legend.
+
+ String scalar or character vector must have valid interpreter syntax:
+$3\,x^2+4\,x-5$
+ 
+  Legend ($x^3+2\,x^2-5\,x+4$, $3\,x^2+4\,x-5$) with properties:
+
+         String: {'$x^3+2\,x^2-5\,x+4$'  '$3\,x^2+4\,x-5$'}
+       Location: 'northeast'
+    Orientation: 'vertical'
+       FontSize: 9
+       Position: [1&times;4 double]
+          Units: 'normalized'
+
+  Use GET to show all properties
+
+</pre><img vspace="5" hspace="5" src="lab2_history_04.png" alt=""> <p class="footer"><br><a href="https://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2018a</a><br></p></div><!--
+##### SOURCE BEGIN #####
+%REPLACE_WITH_DASH_DASH 02/18/2020 02:37:00 PM REPLACE_WITH_DASH_DASH%
+mkdir lab2
+cd lab2
+diary lab2_diary
+%% Simboliskaa mateemaatika
+%% Piemeers
+syms a11 a12 a21 a22
+A = [a11 a12 ; a21 a22]
+syms b11 b12 b21 b22
+B = [b11 b12 ; b21 b22]
+C = A*B
+D = A.*B
+%% Simbolisko mainiigo defineesana
+% 1. veids
+x = sym('x');
+y = sym('y');
+sqrt(x^2)
+%% pienemsim kaa x ir lielaaks par 0
+x = sym('x','positive');
+sqrt(x^2)
+% 2. veids
+syms a11 a12 a21 a22
+A = [a11 a12; a21 a22];
+A'
+%% pienemsim kaa a11 a12 a21 a22 ir relaali
+syms a11 a12 a21 a22 real
+A'
+%% 3. veids
+A = sym('a',[3 4])
+%% atvisinaasana
+syms x
+diff(x^2)
+%% parciaalie atvisinaajumi
+syms x y
+z = x^5+y^4;
+diff(z,x)
+diff(z,y)
+%% Integreesana
+%% Nenoteiktais integraalis\
+int(x^2,x)
+syms a x
+int(x^2,a)
+%% Noteiktais integraalis
+syms x
+int(x^2,x,-3,3)
+double(int(x^2,x,-3,3))
+%% Robezas
+% limit()
+syms x
+limit(1/(x-1),x,1,'left')
+limit(1/(x-1),x,1,'right')
+%% Vienaadojumu risinaashana
+syms x
+solve(x^2-5*x+6==0,x)
+%% Vienaadojumu sisteemas
+syms x y z
+atb = solve(x+y+z==21,x+y-z==1,x-y+z==9)
+atb.x
+atb.y
+atb.z
+%% izteiskmju vienkaarsosana
+syms x
+y = (x-1)*(x-2)/((x-3)*(x-4)^2)
+yd = diff(y)
+simplify(yd)
+%% izteiksju veinkaarsosana 2
+syms x
+y = (x-2)*(x-3);
+y
+y2 = expand(y)
+%% izteiksju veinkaarsosana 3
+factor(y2)
+%% izteiksju veinkaarsosana 4
+horner(y)
+%% simboliskas konstantes
+pi
+format long
+pi
+a = vpa('pi')
+b = vpa('2')
+c = vpa(2)
+a+b+c
+digits(100)
+a = vpa(pi)
+a = vpa(exp(1))
+sqrt(a)
+digits(10)
+sqrt(a)
+class(a)
+class(b)
+class(c)
+%% izteismju "skaista" atteloshana
+y = (x-1)*(x-2)/((x-3)*(x-4)^2)
+pretty(y)
+%% izteismju "skaista" atteloshana 2 variants
+syms x
+y = sqrt(x-1)/(x-4)^5
+yltx = latex(y)
+yltx2 = ['$',yltx,'$']
+text(0,0.5,yltx2,'Interpreter','latex','FontSize',32,'BackgroundColor','white')
+text(0.5,0.5,yltx2,'Interpreter','latex','FontSize',32,'BackgroundColor','white')
+set(gca,'Visible','off')
+%% rezultaatu grafiska atteloshana
+%% apreekinu veiksana
+syms x
+y = x^2;
+ezplot(y)
+%% apreekinu veiksana
+%% rezultaatu grafiskaa atteloshana ar plot
+%% (2. lab. darba 2. uzdevums)
+%% 1.
+% Pienemsim ka ir dota funkcija, kurai ir jaatrod atvasinaajums
+% Un gan funkciju, gan atvasinaajumu buus jaauziimee uz grafika izmantojot plot uzdotaajaa intervaalaa
+% arii ar letex buus jaaizveido "legend" -a
+syms x
+y = x^3+2*x^2-5*x+4;
+% 2.
+yd = diff(y)
+% atradam atvasinaajumu
+% 3.
+% Izteiksmes vektorizaacija
+%% (punktinu ielikshana)
+yv = vectorize(y)
+ydv = vectorize(yd)
+%% 4. defineesim x kaa skaitlu vektoru
+x = -2:0.01:2;
+yn = eval(yv);
+ydn = eval(ydv);
+%% tas biija 5. solis, izteiksmes interpretaacjia, citiem vaardiem, paskataas kaads ir x un ieliek to
+%% 6. ziimesim ar plot
+plot(x,yn,x,ydn)
+%% 7. anoteesim grafiku
+yltx = latex(y);
+ydltxt = latex(yd)
+h = legend(['$',yltx,'$'],['$',ydltxt,'$']), set(h,'Interpreter','Latex')
+plot(x,yn,x,ydn)
+h = legend(['$',yltx,'$'],['$',ydltxt,'$']), set(h,'Interpreter','Latex')
+##### SOURCE END #####
+--></body></html>

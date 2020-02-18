@@ -1,0 +1,1085 @@
+ 
+A =
+ 
+[ a11, a12]
+[ a21, a22]
+ 
+ 
+B =
+ 
+[ b11, b12]
+[ b21, b22]
+ 
+ 
+C =
+ 
+[ a11*b11 + a12*b21, a11*b12 + a12*b22]
+[ a21*b11 + a22*b21, a21*b12 + a22*b22]
+ 
+ 
+D =
+ 
+[ a11*b11, a12*b12]
+[ a21*b21, a22*b22]
+ 
+ 
+ans =
+ 
+x
+ 
+ 
+ans =
+ 
+x
+ 
+ 
+ans =
+ 
+[ a11, a21]
+[ a12, a22]
+ 
+ 
+ans =
+ 
+[ a11, a21]
+[ a12, a22]
+ 
+ 
+A =
+ 
+[ a1_1, a1_2, a1_3, a1_4]
+[ a2_1, a2_2, a2_3, a2_4]
+[ a3_1, a3_2, a3_3, a3_4]
+ 
+ 
+ans =
+ 
+2*x
+ 
+ 
+ans =
+ 
+5*x^4
+ 
+ 
+ans =
+ 
+4*y^3
+ 
+ 
+ans =
+ 
+x^3/3
+ 
+ 
+ans =
+ 
+a*x^2
+ 
+ 
+ans =
+ 
+18
+ 
+
+ans =
+
+    18
+
+ 
+ans =
+ 
+-Inf
+ 
+ 
+ans =
+ 
+Inf
+ 
+ 
+ans =
+ 
+ 2
+ 3
+ 
+
+atb = 
+
+  <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> with fields:
+
+    x: [1×1 sym]
+    y: [1×1 sym]
+    z: [1×1 sym]
+
+ 
+ans =
+ 
+5
+ 
+ 
+ans =
+ 
+6
+ 
+ 
+ans =
+ 
+10
+ 
+ 
+y =
+ 
+((x - 1)*(x - 2))/((x - 3)*(x - 4)^2)
+ 
+ 
+yd =
+ 
+(x - 1)/((x - 3)*(x - 4)^2) + (x - 2)/((x - 3)*(x - 4)^2) - (2*(x - 1)*(x - 2))/((x - 3)*(x - 4)^3) - ((x - 1)*(x - 2))/((x - 3)^2*(x - 4)^2)
+ 
+{Undefined function or variable 'simplyfy'.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lab2_history', '/home/user/lab2/lab2_history.m', 65)" style="font-weight:bold">lab2_history</a> (<a href="matlab: opentoline('/home/user/lab2/lab2_history.m',65,0)">line 65</a>)
+simplyfy(yd)
+} 
+lab2_history
+[Warning: Directory already exists.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lab2_history', '/home/user/lab2/lab2_history.m', 2)" style="font-weight:bold">lab2_history</a> (<a href="matlab: opentoline('/home/user/lab2/lab2_history.m',2,0)">line 2</a>)] 
+ 
+A =
+ 
+[ a11, a12]
+[ a21, a22]
+ 
+ 
+B =
+ 
+[ b11, b12]
+[ b21, b22]
+ 
+ 
+C =
+ 
+[ a11*b11 + a12*b21, a11*b12 + a12*b22]
+[ a21*b11 + a22*b21, a21*b12 + a22*b22]
+ 
+ 
+D =
+ 
+[ a11*b11, a12*b12]
+[ a21*b21, a22*b22]
+ 
+ 
+ans =
+ 
+x
+ 
+ 
+ans =
+ 
+x
+ 
+ 
+ans =
+ 
+[ a11, a21]
+[ a12, a22]
+ 
+ 
+ans =
+ 
+[ a11, a21]
+[ a12, a22]
+ 
+ 
+A =
+ 
+[ a1_1, a1_2, a1_3, a1_4]
+[ a2_1, a2_2, a2_3, a2_4]
+[ a3_1, a3_2, a3_3, a3_4]
+ 
+ 
+ans =
+ 
+2*x
+ 
+ 
+ans =
+ 
+5*x^4
+ 
+ 
+ans =
+ 
+4*y^3
+ 
+ 
+ans =
+ 
+x^3/3
+ 
+ 
+ans =
+ 
+a*x^2
+ 
+ 
+ans =
+ 
+18
+ 
+
+ans =
+
+    18
+
+ 
+ans =
+ 
+-Inf
+ 
+ 
+ans =
+ 
+Inf
+ 
+ 
+ans =
+ 
+ 2
+ 3
+ 
+
+atb = 
+
+  <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> with fields:
+
+    x: [1×1 sym]
+    y: [1×1 sym]
+    z: [1×1 sym]
+
+ 
+ans =
+ 
+5
+ 
+ 
+ans =
+ 
+6
+ 
+ 
+ans =
+ 
+10
+ 
+ 
+y =
+ 
+((x - 1)*(x - 2))/((x - 3)*(x - 4)^2)
+ 
+ 
+yd =
+ 
+(x - 1)/((x - 3)*(x - 4)^2) + (x - 2)/((x - 3)*(x - 4)^2) - (2*(x - 1)*(x - 2))/((x - 3)*(x - 4)^3) - ((x - 1)*(x - 2))/((x - 3)^2*(x - 4)^2)
+ 
+ 
+ans =
+ 
+(- x^3 + 2*x^2 + 9*x - 16)/((x - 3)^2*(x - 4)^3)
+ 
+ 
+y =
+ 
+(x - 2)*(x - 3)
+ 
+ 
+y2 =
+ 
+x^2 - 5*x + 6
+ 
+ 
+ans =
+ 
+[ x - 2, x - 3]
+ 
+ 
+ans =
+ 
+x*(x - 5) + 6
+ 
+
+ans =
+
+   3.141592653589793
+
+
+ans =
+
+   3.141592653589793
+
+ 
+a =
+ 
+3.141592654
+ 
+ 
+b =
+ 
+2.0
+ 
+ 
+c =
+ 
+2.0
+ 
+ 
+ans =
+ 
+7.141592654
+ 
+ 
+a =
+ 
+3.141592653589793238462643383279502884197169399375105820974944592307816406286208998628034825342117068
+ 
+ 
+a =
+ 
+2.71828182845904553488480814849026501178741455078125
+ 
+ 
+ans =
+ 
+1.648721270700128237684053351021451524365396084769306765683519857939541955411797717598212470725485303
+ 
+ 
+ans =
+ 
+1.648721271
+ 
+
+ans =
+
+    'sym'
+
+
+ans =
+
+    'sym'
+
+
+ans =
+
+    'sym'
+
+ 
+y =
+ 
+((x - 1)*(x - 2))/((x - 3)*(x - 4)^2)
+ 
+ (x - 1) (x - 2)
+----------------
+               2
+(x - 3) (x - 4)
+
+ 
+y =
+ 
+(x - 1)^(1/2)/(x - 4)^5
+ 
+
+yltx =
+
+    '\frac{\sqrt{x-1}}{{\left(x-4\right)}^5}'
+
+
+yltx2 =
+
+    '$\frac{\sqrt{x-1}}{{\left(x-4\right)}^5}$'
+
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('text')" style="font-weight:bold">text</a>
+Invalid parameter/value pair arguments
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lab2_history', '/home/user/lab2/lab2_history.m', 100)" style="font-weight:bold">lab2_history</a> (<a href="matlab: opentoline('/home/user/lab2/lab2_history.m',100,0)">line 100</a>)
+text(0,0.5,yltx2,'Interpreter','FontSize',32,'BackgroundColor','white')
+} 
+lab2_history
+[Warning: Directory already exists.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lab2_history', '/home/user/lab2/lab2_history.m', 2)" style="font-weight:bold">lab2_history</a> (<a href="matlab: opentoline('/home/user/lab2/lab2_history.m',2,0)">line 2</a>)] 
+ 
+A =
+ 
+[ a11, a12]
+[ a21, a22]
+ 
+ 
+B =
+ 
+[ b11, b12]
+[ b21, b22]
+ 
+ 
+C =
+ 
+[ a11*b11 + a12*b21, a11*b12 + a12*b22]
+[ a21*b11 + a22*b21, a21*b12 + a22*b22]
+ 
+ 
+D =
+ 
+[ a11*b11, a12*b12]
+[ a21*b21, a22*b22]
+ 
+ 
+ans =
+ 
+x
+ 
+ 
+ans =
+ 
+x
+ 
+ 
+ans =
+ 
+[ a11, a21]
+[ a12, a22]
+ 
+ 
+ans =
+ 
+[ a11, a21]
+[ a12, a22]
+ 
+ 
+A =
+ 
+[ a1_1, a1_2, a1_3, a1_4]
+[ a2_1, a2_2, a2_3, a2_4]
+[ a3_1, a3_2, a3_3, a3_4]
+ 
+ 
+ans =
+ 
+2*x
+ 
+ 
+ans =
+ 
+5*x^4
+ 
+ 
+ans =
+ 
+4*y^3
+ 
+ 
+ans =
+ 
+x^3/3
+ 
+ 
+ans =
+ 
+a*x^2
+ 
+ 
+ans =
+ 
+18
+ 
+
+ans =
+
+    18
+
+ 
+ans =
+ 
+-Inf
+ 
+ 
+ans =
+ 
+Inf
+ 
+ 
+ans =
+ 
+ 2
+ 3
+ 
+
+atb = 
+
+  <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> with fields:
+
+    x: [1×1 sym]
+    y: [1×1 sym]
+    z: [1×1 sym]
+
+ 
+ans =
+ 
+5
+ 
+ 
+ans =
+ 
+6
+ 
+ 
+ans =
+ 
+10
+ 
+ 
+y =
+ 
+((x - 1)*(x - 2))/((x - 3)*(x - 4)^2)
+ 
+ 
+yd =
+ 
+(x - 1)/((x - 3)*(x - 4)^2) + (x - 2)/((x - 3)*(x - 4)^2) - (2*(x - 1)*(x - 2))/((x - 3)*(x - 4)^3) - ((x - 1)*(x - 2))/((x - 3)^2*(x - 4)^2)
+ 
+ 
+ans =
+ 
+(- x^3 + 2*x^2 + 9*x - 16)/((x - 3)^2*(x - 4)^3)
+ 
+ 
+y =
+ 
+(x - 2)*(x - 3)
+ 
+ 
+y2 =
+ 
+x^2 - 5*x + 6
+ 
+ 
+ans =
+ 
+[ x - 2, x - 3]
+ 
+ 
+ans =
+ 
+x*(x - 5) + 6
+ 
+
+ans =
+
+   3.141592653589793
+
+
+ans =
+
+   3.141592653589793
+
+ 
+a =
+ 
+3.141592654
+ 
+ 
+b =
+ 
+2.0
+ 
+ 
+c =
+ 
+2.0
+ 
+ 
+ans =
+ 
+7.141592654
+ 
+ 
+a =
+ 
+3.141592653589793238462643383279502884197169399375105820974944592307816406286208998628034825342117068
+ 
+ 
+a =
+ 
+2.71828182845904553488480814849026501178741455078125
+ 
+ 
+ans =
+ 
+1.648721270700128237684053351021451524365396084769306765683519857939541955411797717598212470725485303
+ 
+ 
+ans =
+ 
+1.648721271
+ 
+
+ans =
+
+    'sym'
+
+
+ans =
+
+    'sym'
+
+
+ans =
+
+    'sym'
+
+ 
+y =
+ 
+((x - 1)*(x - 2))/((x - 3)*(x - 4)^2)
+ 
+ (x - 1) (x - 2)
+----------------
+               2
+(x - 3) (x - 4)
+
+ 
+y =
+ 
+(x - 1)^(1/2)/(x - 4)^5
+ 
+
+yltx =
+
+    '\frac{\sqrt{x-1}}{{\left(x-4\right)}^5}'
+
+
+yltx2 =
+
+    '$\frac{\sqrt{x-1}}{{\left(x-4\right)}^5}$'
+
+ 
+yd =
+ 
+3*x^2 + 4*x - 5
+ 
+
+yv =
+
+    '2.*x.^2 - 5.*x + x.^3 + 4'
+
+
+ydv =
+
+    '4.*x + 3.*x.^2 - 5'
+
+
+ydltxt =
+
+    '3\,x^2+4\,x-5'
+
+
+h = 
+
+[Warning: Error updating Legend.
+
+ String scalar or character vector must have valid interpreter syntax:
+$x^3+2\,x^2-5\,x+4$
+] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('defaulterrorcallback', '/usr/local/MATLAB/R2018a/toolbox/matlab/graphics/defaulterrorcallback.m', 12)" style="font-weight:bold">defaulterrorcallback</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2018a/toolbox/matlab/graphics/defaulterrorcallback.m',12,0)">line 12</a>)
+  In matlab.graphics.illustration.Legend/get.String
+  In matlab.graphics.illustration.Legend/getDescriptiveLabelForDisplay
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lab2_history', '/home/user/lab2/lab2_history.m', 135)" style="font-weight:bold">lab2_history</a> (<a href="matlab: opentoline('/home/user/lab2/lab2_history.m',135,0)">line 135</a>)] 
+[Warning: Error updating Legend.
+
+ String scalar or character vector must have valid interpreter syntax:
+$3\,x^2+4\,x-5$
+] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('defaulterrorcallback', '/usr/local/MATLAB/R2018a/toolbox/matlab/graphics/defaulterrorcallback.m', 12)" style="font-weight:bold">defaulterrorcallback</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2018a/toolbox/matlab/graphics/defaulterrorcallback.m',12,0)">line 12</a>)
+  In matlab.graphics.illustration.Legend/get.String
+  In matlab.graphics.illustration.Legend/getDescriptiveLabelForDisplay
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lab2_history', '/home/user/lab2/lab2_history.m', 135)" style="font-weight:bold">lab2_history</a> (<a href="matlab: opentoline('/home/user/lab2/lab2_history.m',135,0)">line 135</a>)] 
+  <a href="matlab:helpPopup matlab.graphics.illustration.Legend" style="font-weight:bold">Legend</a> ($x^3+2\,x^2-5\,x+4$, $3\,x^2+4\,x-5$) with properties:
+
+         String: {'$x^3+2\,x^2-5\,x+4$'  '$3\,x^2+4\,x-5$'}
+       Location: 'northeast'
+    Orientation: 'vertical'
+       FontSize: 9
+       Position: [0.558479539274472 0.815577080453760 0.328070168327867 0.083535106794020]
+          Units: 'normalized'
+
+  Show <a href="matlab:if exist('h', 'var'), matlab.graphics.internal.getForDisplay('h', h, 'matlab.graphics.illustration.Legend'), else, matlab.graphics.internal.getForDisplay('h'), end">all properties</a>
+
+
+h = 
+
+[Warning: Error updating Legend.
+
+ String scalar or character vector must have valid interpreter syntax:
+$x^3+2\,x^2-5\,x+4$
+] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('defaulterrorcallback', '/usr/local/MATLAB/R2018a/toolbox/matlab/graphics/defaulterrorcallback.m', 12)" style="font-weight:bold">defaulterrorcallback</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2018a/toolbox/matlab/graphics/defaulterrorcallback.m',12,0)">line 12</a>)
+  In matlab.graphics.illustration.Legend/get.String
+  In matlab.graphics.illustration.Legend/getDescriptiveLabelForDisplay
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lab2_history', '/home/user/lab2/lab2_history.m', 137)" style="font-weight:bold">lab2_history</a> (<a href="matlab: opentoline('/home/user/lab2/lab2_history.m',137,0)">line 137</a>)] 
+[Warning: Error updating Legend.
+
+ String scalar or character vector must have valid interpreter syntax:
+$3\,x^2+4\,x-5$
+] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('defaulterrorcallback', '/usr/local/MATLAB/R2018a/toolbox/matlab/graphics/defaulterrorcallback.m', 12)" style="font-weight:bold">defaulterrorcallback</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2018a/toolbox/matlab/graphics/defaulterrorcallback.m',12,0)">line 12</a>)
+  In matlab.graphics.illustration.Legend/get.String
+  In matlab.graphics.illustration.Legend/getDescriptiveLabelForDisplay
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lab2_history', '/home/user/lab2/lab2_history.m', 137)" style="font-weight:bold">lab2_history</a> (<a href="matlab: opentoline('/home/user/lab2/lab2_history.m',137,0)">line 137</a>)] 
+  <a href="matlab:helpPopup matlab.graphics.illustration.Legend" style="font-weight:bold">Legend</a> ($x^3+2\,x^2-5\,x+4$, $3\,x^2+4\,x-5$) with properties:
+
+         String: {'$x^3+2\,x^2-5\,x+4$'  '$3\,x^2+4\,x-5$'}
+       Location: 'northeast'
+    Orientation: 'vertical'
+       FontSize: 9
+       Position: [0.558479539274472 0.815577080453760 0.328070168327867 0.083535106794020]
+          Units: 'normalized'
+
+  Show <a href="matlab:if exist('h', 'var'), matlab.graphics.internal.getForDisplay('h', h, 'matlab.graphics.illustration.Legend'), else, matlab.graphics.internal.getForDisplay('h'), end">all properties</a>
+
+lab2_history
+[Warning: Directory already exists.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lab2_history', '/home/user/lab2/lab2_history.m', 2)" style="font-weight:bold">lab2_history</a> (<a href="matlab: opentoline('/home/user/lab2/lab2_history.m',2,0)">line 2</a>)] 
+ 
+A =
+ 
+[ a11, a12]
+[ a21, a22]
+ 
+ 
+B =
+ 
+[ b11, b12]
+[ b21, b22]
+ 
+ 
+C =
+ 
+[ a11*b11 + a12*b21, a11*b12 + a12*b22]
+[ a21*b11 + a22*b21, a21*b12 + a22*b22]
+ 
+ 
+D =
+ 
+[ a11*b11, a12*b12]
+[ a21*b21, a22*b22]
+ 
+ 
+ans =
+ 
+x
+ 
+ 
+ans =
+ 
+x
+ 
+ 
+ans =
+ 
+[ a11, a21]
+[ a12, a22]
+ 
+ 
+ans =
+ 
+[ a11, a21]
+[ a12, a22]
+ 
+ 
+A =
+ 
+[ a1_1, a1_2, a1_3, a1_4]
+[ a2_1, a2_2, a2_3, a2_4]
+[ a3_1, a3_2, a3_3, a3_4]
+ 
+ 
+ans =
+ 
+2*x
+ 
+ 
+ans =
+ 
+5*x^4
+ 
+ 
+ans =
+ 
+4*y^3
+ 
+ 
+ans =
+ 
+x^3/3
+ 
+ 
+ans =
+ 
+a*x^2
+ 
+ 
+ans =
+ 
+18
+ 
+
+ans =
+
+    18
+
+ 
+ans =
+ 
+-Inf
+ 
+ 
+ans =
+ 
+Inf
+ 
+ 
+ans =
+ 
+ 2
+ 3
+ 
+
+atb = 
+
+  <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> with fields:
+
+    x: [1×1 sym]
+    y: [1×1 sym]
+    z: [1×1 sym]
+
+ 
+ans =
+ 
+5
+ 
+ 
+ans =
+ 
+6
+ 
+ 
+ans =
+ 
+10
+ 
+ 
+y =
+ 
+((x - 1)*(x - 2))/((x - 3)*(x - 4)^2)
+ 
+ 
+yd =
+ 
+(x - 1)/((x - 3)*(x - 4)^2) + (x - 2)/((x - 3)*(x - 4)^2) - (2*(x - 1)*(x - 2))/((x - 3)*(x - 4)^3) - ((x - 1)*(x - 2))/((x - 3)^2*(x - 4)^2)
+ 
+ 
+ans =
+ 
+(- x^3 + 2*x^2 + 9*x - 16)/((x - 3)^2*(x - 4)^3)
+ 
+ 
+y =
+ 
+(x - 2)*(x - 3)
+ 
+ 
+y2 =
+ 
+x^2 - 5*x + 6
+ 
+ 
+ans =
+ 
+[ x - 2, x - 3]
+ 
+ 
+ans =
+ 
+x*(x - 5) + 6
+ 
+
+ans =
+
+   3.141592653589793
+
+
+ans =
+
+   3.141592653589793
+
+ 
+a =
+ 
+3.141592654
+ 
+ 
+b =
+ 
+2.0
+ 
+ 
+c =
+ 
+2.0
+ 
+ 
+ans =
+ 
+7.141592654
+ 
+ 
+a =
+ 
+3.141592653589793238462643383279502884197169399375105820974944592307816406286208998628034825342117068
+ 
+ 
+a =
+ 
+2.71828182845904553488480814849026501178741455078125
+ 
+ 
+ans =
+ 
+1.648721270700128237684053351021451524365396084769306765683519857939541955411797717598212470725485303
+ 
+ 
+ans =
+ 
+1.648721271
+ 
+
+ans =
+
+    'sym'
+
+
+ans =
+
+    'sym'
+
+
+ans =
+
+    'sym'
+
+ 
+y =
+ 
+((x - 1)*(x - 2))/((x - 3)*(x - 4)^2)
+ 
+ (x - 1) (x - 2)
+----------------
+               2
+(x - 3) (x - 4)
+
+ 
+y =
+ 
+(x - 1)^(1/2)/(x - 4)^5
+ 
+
+yltx =
+
+    '\frac{\sqrt{x-1}}{{\left(x-4\right)}^5}'
+
+
+yltx2 =
+
+    '$\frac{\sqrt{x-1}}{{\left(x-4\right)}^5}$'
+
+ 
+yd =
+ 
+3*x^2 + 4*x - 5
+ 
+
+yv =
+
+    '2.*x.^2 - 5.*x + x.^3 + 4'
+
+
+ydv =
+
+    '4.*x + 3.*x.^2 - 5'
+
+
+ydltxt =
+
+    '3\,x^2+4\,x-5'
+
+
+h = 
+
+[Warning: Error updating Legend.
+
+ String scalar or character vector must have valid interpreter syntax:
+$x^3+2\,x^2-5\,x+4$
+] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('defaulterrorcallback', '/usr/local/MATLAB/R2018a/toolbox/matlab/graphics/defaulterrorcallback.m', 12)" style="font-weight:bold">defaulterrorcallback</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2018a/toolbox/matlab/graphics/defaulterrorcallback.m',12,0)">line 12</a>)
+  In matlab.graphics.illustration.Legend/get.String
+  In matlab.graphics.illustration.Legend/getDescriptiveLabelForDisplay
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lab2_history', '/home/user/lab2/lab2_history.m', 135)" style="font-weight:bold">lab2_history</a> (<a href="matlab: opentoline('/home/user/lab2/lab2_history.m',135,0)">line 135</a>)] 
+[Warning: Error updating Legend.
+
+ String scalar or character vector must have valid interpreter syntax:
+$3\,x^2+4\,x-5$
+] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('defaulterrorcallback', '/usr/local/MATLAB/R2018a/toolbox/matlab/graphics/defaulterrorcallback.m', 12)" style="font-weight:bold">defaulterrorcallback</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2018a/toolbox/matlab/graphics/defaulterrorcallback.m',12,0)">line 12</a>)
+  In matlab.graphics.illustration.Legend/get.String
+  In matlab.graphics.illustration.Legend/getDescriptiveLabelForDisplay
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lab2_history', '/home/user/lab2/lab2_history.m', 135)" style="font-weight:bold">lab2_history</a> (<a href="matlab: opentoline('/home/user/lab2/lab2_history.m',135,0)">line 135</a>)] 
+  <a href="matlab:helpPopup matlab.graphics.illustration.Legend" style="font-weight:bold">Legend</a> ($x^3+2\,x^2-5\,x+4$, $3\,x^2+4\,x-5$) with properties:
+
+         String: {'$x^3+2\,x^2-5\,x+4$'  '$3\,x^2+4\,x-5$'}
+       Location: 'northeast'
+    Orientation: 'vertical'
+       FontSize: 9
+       Position: [0.552380959618659 0.818650795779531 0.333928564190865 0.082142855014120]
+          Units: 'normalized'
+
+  Show <a href="matlab:if exist('h', 'var'), matlab.graphics.internal.getForDisplay('h', h, 'matlab.graphics.illustration.Legend'), else, matlab.graphics.internal.getForDisplay('h'), end">all properties</a>
+
+
+h = 
+
+[Warning: Error updating Legend.
+
+ String scalar or character vector must have valid interpreter syntax:
+$x^3+2\,x^2-5\,x+4$
+] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('defaulterrorcallback', '/usr/local/MATLAB/R2018a/toolbox/matlab/graphics/defaulterrorcallback.m', 12)" style="font-weight:bold">defaulterrorcallback</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2018a/toolbox/matlab/graphics/defaulterrorcallback.m',12,0)">line 12</a>)
+  In matlab.graphics.illustration.Legend/get.String
+  In matlab.graphics.illustration.Legend/getDescriptiveLabelForDisplay
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lab2_history', '/home/user/lab2/lab2_history.m', 137)" style="font-weight:bold">lab2_history</a> (<a href="matlab: opentoline('/home/user/lab2/lab2_history.m',137,0)">line 137</a>)] 
+[Warning: Error updating Legend.
+
+ String scalar or character vector must have valid interpreter syntax:
+$3\,x^2+4\,x-5$
+] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('defaulterrorcallback', '/usr/local/MATLAB/R2018a/toolbox/matlab/graphics/defaulterrorcallback.m', 12)" style="font-weight:bold">defaulterrorcallback</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2018a/toolbox/matlab/graphics/defaulterrorcallback.m',12,0)">line 12</a>)
+  In matlab.graphics.illustration.Legend/get.String
+  In matlab.graphics.illustration.Legend/getDescriptiveLabelForDisplay
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lab2_history', '/home/user/lab2/lab2_history.m', 137)" style="font-weight:bold">lab2_history</a> (<a href="matlab: opentoline('/home/user/lab2/lab2_history.m',137,0)">line 137</a>)] 
+  <a href="matlab:helpPopup matlab.graphics.illustration.Legend" style="font-weight:bold">Legend</a> ($x^3+2\,x^2-5\,x+4$, $3\,x^2+4\,x-5$) with properties:
+
+         String: {'$x^3+2\,x^2-5\,x+4$'  '$3\,x^2+4\,x-5$'}
+       Location: 'northeast'
+    Orientation: 'vertical'
+       FontSize: 9
+       Position: [0.552380959618659 0.818650795779531 0.333928564190865 0.082142855014120]
+          Units: 'normalized'
+
+  Show <a href="matlab:if exist('h', 'var'), matlab.graphics.internal.getForDisplay('h', h, 'matlab.graphics.illustration.Legend'), else, matlab.graphics.internal.getForDisplay('h'), end">all properties</a>
+
