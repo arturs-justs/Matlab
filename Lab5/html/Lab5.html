@@ -1,0 +1,161 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>5.laboratorijas darbs</title><meta name="generator" content="MATLAB 9.4"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2020-04-07"><meta name="DC.source" content="Lab5.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img, h1 img, h2 img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, code { font-size:12px; }
+tt { font-size: 1.2em; }
+pre { margin:0px 0px 20px; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+pre.error { color:red; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><h1>5.laboratorijas darbs</h1><!--introduction--><p>Artuurs Justs (REBMO2)</p><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Darba uzdevumi</a></li><li><a href="#3">Secinaajumu</a></li></ul></div><h2 id="1">Darba uzdevumi</h2><div><ul><li>Atkaartot to kas bija raadiits klasee ieliekot savu signaalu un diodi, resp.</li><li>Ielikt savu signaalu no 3.laboratorijas darba</li><li>Ielikt savu diodi (i0,a parametri)</li><li>a nav dots, to ir jaatrod izmantojot grafika doto informaaciju (Atrast) un uzziimeet uz viena grafika</li><li>Ieejas spriegumu (E), izejas spriegumu (UR)</li></ul></div><div><ul><li>!!! Es izmantoju grafikus un parametrus no Artuura Lillaisa darba, jo kad tika taisiits 3 lab. darbs, nebija induviduala uzdevuma uz mana vaarda</li></ul></div><pre class="codeinput"><span class="keyword">function</span> Laboratorijas_Darbs_5
+<span class="keyword">global</span> E R i0 a
+Ud = 2;
+id = 4.5;
+R=2; i0 =1e-05; a=2;
+t= 0:0.01:6;
+<span class="comment">% konstantes (2; 5; 10 vai 100)</span>
+Et = 50*lab3_done_v2(t);
+
+URm = [];
+<span class="keyword">for</span> E = Et
+    UR = newmet5;
+    URm = [URm,UR];
+<span class="keyword">end</span>
+plot(t,Et,t,URm)
+legend(<span class="string">'Et'</span>,<span class="string">'UR'</span>)
+
+<span class="comment">% Otraa funkcija</span>
+<span class="keyword">function</span> x0 = newmet5
+epsilon = 1e-3;
+x0 = 0;
+delta = funx(x0)/fund(x0);
+<span class="keyword">while</span>(abs(delta)&gt;epsilon)
+delta = funx(x0)/fund(x0);
+x0 = x0-delta;
+<span class="keyword">end</span>
+
+<span class="comment">% Treshaa funkcija</span>
+<span class="keyword">function</span> fx = funx(UR)
+<span class="keyword">global</span> E R i0 a
+fx = i0*(exp(a*(E-UR))-1)-UR/R;
+
+<span class="comment">% Ceturtaa funkcija</span>
+<span class="keyword">function</span> fx = fund(UR)
+</pre><pre class="codeinput"><span class="keyword">global</span> E R i0 a
+fx = - 1/R - a*i0*exp(a*(E - UR));
+</pre><img vspace="5" hspace="5" src="Lab5_01.png" alt=""> <h2 id="3">Secinaajumu</h2><div><ul><li>Sini darbaa es labaak iepazinos ar funkciju/ciklu darbiibu un to izveidoshanu. Arii labaak iepazinos ar taadu programmas iespeeju, kaa datu izmantoshana no pagaishaa darba un to apstraadi nakoshaajaa.</li></ul></div><p class="footer"><br><a href="https://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2018a</a><br></p></div><!--
+##### SOURCE BEGIN #####
+%% 5.laboratorijas darbs
+% Artuurs Justs (REBMO2)
+%% Darba uzdevumi
+% * Atkaartot to kas bija raadiits klasee ieliekot savu signaalu un diodi, resp.
+% * Ielikt savu signaalu no 3.laboratorijas darba
+% * Ielikt savu diodi (i0,a parametri)
+% * a nav dots, to ir jaatrod izmantojot grafika doto informaaciju (Atrast) un uzziimeet uz viena grafika 
+% * Ieejas spriegumu (E), izejas spriegumu (UR)
+%
+% * !!! Es izmantoju grafikus un parametrus no Artuura Lillaisa darba, jo
+% kad tika taisiits 3 lab. darbs, nebija induviduala uzdevuma uz mana vaarda
+
+function Laboratorijas_Darbs_5
+global E R i0 a
+Ud = 2;
+id = 4.5;
+R=2; i0 =1e-05; a=2;
+t= 0:0.01:6;
+% konstantes (2; 5; 10 vai 100)
+Et = 50*lab3_done_v2(t);
+
+URm = [];
+for E = Et
+    UR = newmet5;
+    URm = [URm,UR];
+end
+plot(t,Et,t,URm)
+legend('Et','UR')
+
+% Otraa funkcija
+function x0 = newmet5
+epsilon = 1e-3;
+x0 = 0;
+delta = funx(x0)/fund(x0);
+while(abs(delta)>epsilon)
+delta = funx(x0)/fund(x0);
+x0 = x0-delta;
+end
+
+% Treshaa funkcija
+function fx = funx(UR)
+global E R i0 a
+fx = i0*(exp(a*(E-UR))-1)-UR/R;
+
+% Ceturtaa funkcija
+function fx = fund(UR)
+global E R i0 a
+fx = - 1/R - a*i0*exp(a*(E - UR));
+
+%% Secinaajumu
+% * Sini darbaa es labaak iepazinos ar funkciju/ciklu darbiibu un to
+% izveidoshanu. Arii labaak iepazinos ar taadu programmas iespeeju, kaa datu
+% izmantoshana no pagaishaa darba un to apstraadi nakoshaajaa.
+##### SOURCE END #####
+--></body></html>
