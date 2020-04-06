@@ -14,7 +14,9 @@ function Laboratorijas_Darbs_5
 global E R i0 a
 Ud = 2;
 id = 4.5;
-R=2; i0 =1e-05; a=2;
+R=2; i0 =1e-05; 
+% a tika atrasts ar a = solve(i0*(exp(a*Ud)-1)==id,a)
+a=6.5085;
 t= 0:0.01:6;
 % konstantes (2; 5; 10 vai 100)
 Et = 50*lab3_done_v2(t);
